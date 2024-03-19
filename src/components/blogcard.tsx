@@ -1,12 +1,12 @@
-
-
+import Link from 'next/link'
 import React from 'react'
 interface IBlogcard {
     title: string
     image: string
+    slug: string
 }
 
-export default function Blogcard({title, image}) {
+export const Blogcard: React.FC<IBlogcard> = ({title, image, slug}) => {
   return (
     <div>
         <div className="card w-96 h-[25rem] bg-base-100 shadow-xl">
@@ -14,7 +14,9 @@ export default function Blogcard({title, image}) {
             <div className="card-body">
             <h2 className="card-title">{title}</h2>
                 <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Buy Now</button>
+                    <Link href={`/blog/${slug}`}>
+                        <button className="btn btn-primary">Read</button>
+                    </Link>
                 </div>
             </div>
         </div>
