@@ -11,7 +11,7 @@ export default async function Home() {
   return (
     <div className="h-screen">
       <Navbar />
-      <div className="flex justify-center">
+      <div className="flex my-20 justify-center gap-10">
        {
         blogs.map((items: any) => {
          
