@@ -13,10 +13,10 @@ export default function CopyButton({ slug, url }: { slug: string, url: string })
                 copy(`${url}/blog/${slug}`);
                 setCopied(true);
             }} 
-            className="text-gray-500 dark:text-gray-400 bg-gray-200 hover:bg-gray-300 dark:hover:bg-gray-800 rounded-full p-[10px] inline-flex items-center justify-center"
+            className="text-gray-500 dark:text-gray-400 bg-gray-200 hover:bg-gray-300 dark:hover:bg-gray-800 rounded-full p-[10px] w-[33px] items-center justify-center"
         >
             { copied ? 
-                <span className="inline-flex items-center">
+                <span className="items-center">
                     <svg className="w-3.5 h-3.5 text-blue-700 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
                     </svg>
